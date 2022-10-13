@@ -21,7 +21,7 @@ CLI tool @ /usr/local<br/>
 **Source**: [brew.sh](brew.sh)<br/>
 **Obtained**: 2021-11-03; [Homebrew](brew.sh)<br/>
 **License**: public domain<br/>
-**Critical Data**: /usr/local<br/>
+**Critical Data**: @/usr/local/bin; expects config files at ~/<br/>
 - Homebrew package @ /usr/local/Homebrew
 - Installed packages @ /usr/local/Cellar
 - Casks for gui apps @ /usr/local/Caskroom
@@ -45,3 +45,26 @@ Create a GitHub personal access token:
 ### Homebrew Alternatives Considered
 Homebrew is the standard for package installation.
 No other alternatives were considered.
+
+# Using Homebrew
+*establish Admin access for HomeBrew installation*
+> su carolclark
+
+*avoid GateKeeper's intrusive dialogs when opening new apps*
+> brew install --no-quarantine &lt;name&gt;<br>
+  *now preset in zshrc:*
+  export HOMEBREW_CASK_OPTS="--no-quarantine"
+
+*write Brewfile*
+> cd ~/dotfiles
+> brew bundle dump --force --describe<br>
+
+  resulting Brewfile includes what Homebrew has installed so far
+
+*uninstall a package*
+> brew uninstall &lt;name&gt;<br>
+
+*list installed packages and casks*<br>
+> brew bundle list [ --brews | --casks | --taps | --all ]<br>
+
+> NOTE: output may be affected by whether a Brewfile is present
