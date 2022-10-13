@@ -9,6 +9,51 @@ WebApp @ https://github.com<br/>
 
 ## Using GitHub
 
+### Connect to GitHub via SSH
+NOTE: GitHub advice is to use ONLY the SSH Agent provided with macOS.
+
+Generate SSH Keys
+- generate keys
+```shell
+ssh-keygen -t ed25519 -C "carolclark@cebcar"
+```
+- save at ~/.ssh/id_ed25519; supply passphrase
+
+- verify connection via SSH Agent
+```shell
+eval "$(ssh-agent -s)
+```
+
+Authenticate with GitHub via SSH
+- create file ~/.ssh/config
+  - copy content from GitHub SSH
+  - currently:<br>
+```plaintext
+    Host *
+      AddKeysToAgent yes
+      UseKeychain yes
+      IdentityFile: ~/.ssh/id_ed25519
+```
+- add GitHub SSH private key to SSH Agent
+```
+ssh --add -K ~/.ssh/id_ed25519
+```
+- copy key to pasteboard
+```
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+- add SSH private key to GitHub
+
+  - Settings : Developer : SSH &amp; GPG Keys : New SSH Key; paste in key<br><br>
+
+- verify connection
+  - check count of existing known_hosts, if any<br><br>
+  ```
+  ssh -T git@github.com
+  ```
+  - continue if displayed key matches<br><br>
+- verify: additional known_host at ~/.ssh
+
 ### Create New Repository
 GitHub : ‘cebcar’ : New
 - supply repo Name and Description
@@ -85,3 +130,5 @@ We use Personal Access Tokens for:
       - display the issue's screen
       - select trashcan next to "Delete Issue", near bottom of left panel
       - disable issue deletion
+
+<button onclick="window.print()">Print Button</button>
