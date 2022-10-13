@@ -130,5 +130,3 @@ We use Personal Access Tokens for:
       - display the issue's screen
       - select trashcan next to "Delete Issue", near bottom of left panel
       - disable issue deletion
-
-<button onclick="window.print()">Print Button</button>
