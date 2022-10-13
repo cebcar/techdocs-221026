@@ -62,8 +62,6 @@ git core.attributesfile:
 - squash last N commits
 > git rebase -i HEAD~N
 
-<!-- > git rebase --interactive HEAD~n -->
-
 ### Stashes
 - stash away the changes in a working directory
 > git stash [push -m message]
