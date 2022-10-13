@@ -41,6 +41,9 @@ EOF
   "key": "ctrl+`","command":"workbench.action.terminal.focus",
   ~~~
 
+### Open Another Project
+- File > New Window
+
 ### Launching from the command line
 - find Shell Commands
   - Command Commands: Palette (csP): search for "shell"
