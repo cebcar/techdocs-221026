@@ -3,6 +3,12 @@
   (VS Codium is a binary releases of VS Code without MS branding/telemetry/licensing)
 
 ## Configuration
+- enable tab completion
+  User : Text Editor : Tab Completion : on
+- workbench.colorTheme
+  - TechDocs: Abyss
+  - Dotfiles: Kimbie Dark
+
 ### Installation
 Homebrew: vscodium
 Then, to add its binary to PATH:
@@ -29,9 +35,13 @@ EOF
 - Source Control	rsG
 - Run &amp; Debug	scD
 - Extensions		scX
+- Custom Keybindings
+  - switch keyboard focus to Terminal r`
+  ~~~ json
+  "key": "ctrl+`","command":"workbench.action.terminal.focus",
+  ~~~
 
 ### Launching from the command line
 - find Shell Commands
   - Command Commands: Palette (csP): search for "shell"
     - Shell Command: install 'codium' command in PATH
-
