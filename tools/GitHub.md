@@ -22,9 +22,8 @@ GitHub : ‘cebcar’ : New
   - [-] Allow rebase merging <br><br>
 
 - repository settings:
-  - turn off:
-    - Projects; we use ZenHub projects
-    - Preserve this repository; intended for long-term preservation of shared open-source code <br><br>
+  - [+] Projects on
+  - [-] Preserve this repository; intended for long-term preservation of shared open-source code <br><br>
 
 - .gitignore
   - do not ignore .gitignore
@@ -67,20 +66,22 @@ We use Personal Access Tokens for:
 #### Access GitHub Developer Settings
 - from Developer avatar at top right of any GitHub screen: Settings > Developer settings
 
-#### Delete an Issue
-- ***Warning***: the only reason we now know for deleting a GitHub issue is<br/>
-  to remove an unwanted issue from a ZenHub Roadmap
+### Issues
+- reference an issue from a commit without closing, ...: #issuenbr
 
-- reference: [ZenHub: Deleting GitHub Issues or ZenHub Epics](https://help.zenhub.com/support/solutions/articles/43000480335-deleting-github-issues-or-zenhub-epics)
+- Delete an Issue
+  - ***Warning***: the only reason we now know for deleting a GitHub issue is to remove an unwanted issue from a ZenHub Roadmap
 
-- from GitHub
-  - to enable/disable issue deletion:
-    - under personal icon at far top right
-      - select 'Your Organizations' and switch to cebcar account
-    - left sidebar: select Member Privileges
-    - toggle "Allow members to delete issues for this organization"
-  - so:
-    - enable issue deletion
-    - display the issue's screen
-    - select trashcan next to "Delete Issue", near bottom of left panel
-    - disable issue deletion
+  - reference: [ZenHub: Deleting GitHub Issues or ZenHub Epics](https://help.zenhub.com/support/solutions/articles/43000480335-deleting-github-issues-or-zenhub-epics)
+
+  - from GitHub
+    - to enable/disable issue deletion:
+      - under personal icon at far top right
+        - select 'Your Organizations' and switch to cebcar account
+      - left sidebar: select Member Privileges
+      - toggle "Allow members to delete issues for this organization"
+    - so:
+      - enable issue deletion
+      - display the issue's screen
+      - select trashcan next to "Delete Issue", near bottom of left panel
+      - disable issue deletion
