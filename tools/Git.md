@@ -55,8 +55,12 @@ git core.attributesfile:
   > git amend
   > git commit --amend [--no-edit]<br><br>
     - edit commit message if indicated
-<!-- TODO ..squash commits.. (TEST and expand) -->
-<!-- > git rebase --interactive HEAD~n -->
+
+- unstage a commit
+> git rm --cached <filename>
+
+- squash/pick last N commits
+> git rebase -i HEAD~N
 
 ### Stashes
 - stash away the changes in a working directory
