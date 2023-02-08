@@ -10,7 +10,7 @@ WebApp @ https://github.com<br/>
 ## Using GitHub
 
 ### Create New Repository
-GitHub : ‘cebcar’ : New
+GitHub : ‘cebcar’ : New Repository
 - supply repo Name and Description
 - make repository “Public”
 - initialize repo with a README
